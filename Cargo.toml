@@ -1,0 +1,15 @@
+[package]
+name = "rust-compressor"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rayon = "1.10"
+
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+
+[build]
+rustflags = ["-C", "target-cpu=native"]
